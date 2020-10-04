@@ -12,32 +12,22 @@
 </head>
 <body> 
     
-
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownStateButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Select a State:
-        </button>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownCityButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Select a City:
-        </button>
-
     <!--Submit button-->
-    <button class="btn btn-primary" id="submit" type="submit">Button</button>
+    <button class="btn btn-primary" id="submit" type="submit">Click to see the weather</button>
 
     <!--Current Weather-->
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Current Weather</h1>
-            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            <h1 class="display-4">Today's Weather</h1>
+            <p class="lead" id="currentWeather"></p>
             <p class=currentWeather id=currentTime>Time Stamp: </p>
             <p class=currentWeather id=currentTemp>Temperature: </p>
             <p class=currentWeather id=currentWindSpeed>Wind Speed: </p>
             <p class=currentWeather id=currentWindDir>Wind Direction: </p>
             <p class=currentWeather id=currentHumidity>Humidity: </p>
-            <p class=currentWeather id=currentIcon>will be weather icon from api </p>
+            <img id="apiIcon" src="" alt="">            
         </div>
-        </div>
+    </div>
       
     <!--Cards to display clothing type-->
     <div class="card-group">
