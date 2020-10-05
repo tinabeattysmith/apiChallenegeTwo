@@ -11,57 +11,63 @@
     <title>Document</title>
 </head>
 <body> 
-    
+ 
+<div class="container">  
+
     <!--Submit button-->
-    <button class="btn btn-primary" id="submit" type="submit">Click to see the weather</button>
+    <div class="container_btn">        
+        <button class="btn btn-primary" id="submit" type="submit">Click to see how to dress today</button>
+    </div> 
 
     <!--Current Weather-->
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4">Today's Weather</h1>
-            <p class="lead" id="currentWeather"></p>
-            <p class=currentWeather id=currentTime>Time Stamp: </p>
-            <p class=currentWeather id=currentTemp>Temperature: </p>
-            <p class=currentWeather id=currentWindSpeed>Wind Speed: </p>
-            <p class=currentWeather id=currentWindDir>Wind Direction: </p>
-            <p class=currentWeather id=currentHumidity>Humidity: </p>
-            <img id="apiIcon" src="" alt="">            
+    <div class = "container_deck">
+        <div class="card-deck">
+            <div class="card">
+                <!--Weather Details-->
+                <div class="card-body_details" id="details">
+                    <h5 class="card-title">Today's Weather</h5>
+                    <p class="card-text" id="currentWeather"></p>
+                    <p class=currentWeather id=currentTime>Time Stamp: </p>
+                    <p class=currentWeather id=currentTemp>Temperature: </p>
+                    <p class=currentWeather id=currentWindSpeed>Wind Speed: </p>
+                    <p class=currentWeather id=currentWindDir>Wind Direction: </p>
+                    <p class=currentWeather id=currentHumidity>Humidity: </p>
+                </div>
+            </div>
+            <!--Weather Image-->   
+            <div class="card">
+                <div class="card-body_details" id="weatherImage">
+                    <img id="apiIcon"src="..." class="card-img" alt="...">
+                </div>
+            </div>
         </div>
     </div>
-      
-    <!--Cards to display clothing type-->
+
+    <!--Display clothing type-->
     <div class="card-group">
-        <div class="card">
-            <img src="./assets/bottoms_shorts.jpg" class="card-img-top" alt="shorts">
-            <div class="card-body">
-            <h5 class="card-title">Bottoms</h5>
-            <p class="card-text">This will display suggestion for what type of bottoms to wear depending on the weather.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
+        <div class="card">            
+            <div class="card-body_images">
+                <img id="bottoms" src="./assets/defaultClothingImage.webp" class="card-img-top shadow p-3 mb-5 bg-white rounded" alt="QuestioningBear">
+          </div>
         </div>
-        <div class="card">
-            <img src="./assets/bottoms_shorts.jpg" class="card-img-top" alt="shorts">
-            <div class="card-body">
-            <h5 class="card-title">Tops</h5>
-            <p class="card-text">This will display suggestion for what type of tops to wear depending on the weather..</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
+        <div class="card">        
+          <div class="card-body_images">
+            <img id="tops" src="./assets/defaultClothingImage.webp" class="card-img-top shadow p-3 mb-5 bg-white rounded" alt="QuestioningBear">
+          </div>
         </div>
-        <div class="card">
-            <img src="./assets/bottoms_shorts.jpg" class="card-img-top" alt="shorts">
-            <div class="card-body">
-            <h5 class="card-title">OuterWear</h5>
-            <p class="card-text">This will display suggestion for what type of outwear, if any, to wear depending on the weather..</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
+        <div class="card">         
+          <div class="card-body_images">
+            <img id="outerwear" src="./assets/defaultClothingImage.webp" class="card-img-top shadow p-3 mb-5 bg-white rounded" alt="QuestioningBear">
+          </div>
         </div>
-        </div>
+      </div>
 
     <!--JS SCRIPT-->
     <script type="text/javascript" src="./ideas.js"></script> 
 
     <!--BOOTSTRAP SCRIPTS-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>

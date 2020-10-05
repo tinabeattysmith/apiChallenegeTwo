@@ -5,9 +5,11 @@ let country = "USA";
 let key = '88685f1b-f5be-478c-a063-f6ef94dfad42';
 //cities endpoiont
 let url = `${baseurl}city?city=${city}&state=${state}&country=${country}&key=${key}`
-console.log(url)
+//console.log(url)
 
-
+//declaring variables
+let weather;
+let timeDate;
 let FahrTemp;
 let directions;
 let wSpeed;
@@ -34,10 +36,9 @@ function fetchResults(e) {
 	};  // fetch results
 
 	function getWeather(json) {
-		let weather = json.data.current.weather;
+		weather = json.data.current.weather;
 		//console.log(weather);
 			
-	
 		//Destructure response to get information
 		let {"ts": timestamp, "tp":temperature, "hu":humidity, "ws":windspeed, "wd":winddirection,"ic":icon}
 		= weather
@@ -50,7 +51,7 @@ function fetchResults(e) {
 			// console.log(icon);
 		
 		// convert timestamp to time/date
-		let timeDate = new Date(timestamp);
+		timeDate = new Date(timestamp);
 		//console.log(timeDate);	
 
 		// convert celcius to fahrenheit
@@ -71,10 +72,9 @@ function fetchResults(e) {
 		//converts winddirection angle to direction
 		function getCardinalDirection(winddirection) {
 			directions = ['↑ N', '↗ NE', '→ E', '↘ SE', '↓ S', '↙ SW', '← W', '↖ NW'];
-			wDirection = (directions[Math.round(winddirection / 45) % 8])		
+			wDirection = (directions[Math.round(winddirection / 45) % 8]);	
 		}
 		getCardinalDirection(winddirection)
-
 
 		//display response in DOM	
 		let weatherdisplay = document.getElementById('currentWeather').innerHTML=`The current weather in ${city}, ${state}`		
@@ -106,11 +106,15 @@ function fetchResults(e) {
 				displayicon.src = "./assets/apiImages/03d.png"
 				displayicon.alt = "Partly cloudy day"
 
+			} 	else if(icon == '03n'){
+				displayicon.src = "./assets/cloudyNight.jpg"
+				displayicon.alt = "Cloudy night"
+				
 			} 	else if(icon == '04d'){
-				displayicon.src = "./assets/apiImages/04d.png"
+				displayicon.src = "./assets/cloudy.jpg"
 				displayicon.alt = "Cloudy day"
-
-			}	else if(icon == '09d'){
+			
+			}   else if(icon == '09d'){
 				displayicon.src = "./assets/apiImages/09d.png"
 				displayicon.alt = "Rainy day"
 
@@ -124,6 +128,29 @@ function fetchResults(e) {
 
 			}	else {console.log=("no results")
 			}; //ends ifelse statment
+	
+		
+		let whatBottom = document.getElementById("bottoms");
+			if (FahrTemp > '70'){
+				whatBottom.src = "./assets/jeans.png"
+				whatBottom.alt = "BlueShorts"
+			} 	else if (FahrTemp <'70' && FahrTemp > '30') {
+					whatBottom.src = "./assets/jeans.png"
+					whatBottom.alt = "Jeans"	
+			}
+							
+		let whatShirt = document.getElementById("tops");
+			if (FahrTemp > '70'){
+				whatShirt.src = "./assets/topsShortSleeve.jpg"
+				whatShirt.alt = "ShortSleeveShirt"
+			}	else if (FahrTemp < '60'){
+					whatShirt.src = "./assets/TN_winter_turtle_neck_sweater_01.jpg"
+					whatShirt.alt = "Sweater"
+			}
 
-
+		let whatOuter = document.getElementById("outerwear");
+			if (FahrTemp < '60'){
+				whatOuter.src = "./assets/outerWearPinkCoat.png"
+				whatOuter.alt = "LightJacket"
+			}
 	}; //ends getWeather

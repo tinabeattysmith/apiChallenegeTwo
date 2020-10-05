@@ -1,0 +1,39 @@
+.container {
+    max-width: 100%;
+    background-image: url(./assets/background.jpg);
+    background-repeat: none;
+}
+
+.container_btn {
+    text-align: center;
+    padding: 1em;
+}
+
+
+.card-body_details {
+    display: grid; 
+    background-image: linear-gradient( 109.6deg,  rgba(48,207,208,1) 11.2%, rgba(51,8,103,1) 92.5% );
+}
+
+#details h5 {
+   
+    text-align: center;
+    font-weight: bold;
+    color: rgb(4, 4, 56);
+}
+
+#currentWeather {
+    text-align: center;
+    
+}
+
+.card-group{
+    padding: 1em;    
+    
+}
+
+.card-body_images {
+    display: flex;
+    background-image: linear-gradient( 179.4deg,  rgba(251,197,0,1) 35.9%, rgba(255,103,4,1) 89.5% );
+    
+}
