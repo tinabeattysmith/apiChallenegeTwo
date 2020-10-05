@@ -20,9 +20,9 @@
     </div> 
 
     <!--Current Weather-->
-    <div class = "container_deck">
-        <div class="card-deck">
-            <div class="card">
+    <div class = "grid-container_deck ">
+        <div class="card-deck row align-items-center ">
+            <div class="card col">
                 <!--Weather Details-->
                 <div class="card-body_details" id="details">
                     <h5 class="card-title">Today's Weather</h5>
@@ -35,32 +35,33 @@
                 </div>
             </div>
             <!--Weather Image-->   
-            <div class="card">
+            <div class="card col">
                 <div class="card-body_details" id="weatherImage">
                     <img id="apiIcon"src="..." class="card-img" alt="...">
                 </div>
             </div>
         </div>
-    </div>
+   
+      <!--Display clothing type-->
+      <div class="card-group row align-items-center">
+        <div class="card_images col">   
+          <img id="bottoms" src="./assets/defaultClothingImage.webp" class="card-img-top" alt="QuestioningBear">
+        </div>
 
-    <!--Display clothing type-->
-    <div class="card-group">
-        <div class="card">            
-            <div class="card-body_images">
-                <img id="bottoms" src="./assets/defaultClothingImage.webp" class="card-img-top shadow p-3 mb-5 bg-white rounded" alt="QuestioningBear">
-          </div>
+        <div class="card_images col">        
+            <img id="tops" src="./assets/defaultClothingImage.webp" class="card-img-top" alt="QuestioningBear">
         </div>
-        <div class="card">        
-          <div class="card-body_images">
-            <img id="tops" src="./assets/defaultClothingImage.webp" class="card-img-top shadow p-3 mb-5 bg-white rounded" alt="QuestioningBear">
-          </div>
+    
+        <div class="card_images col">         
+            <img id="outerwear" src="./assets/defaultClothingImage.webp" class="card-img-top" alt="QuestioningBear">
         </div>
-        <div class="card">         
-          <div class="card-body_images">
-            <img id="outerwear" src="./assets/defaultClothingImage.webp" class="card-img-top shadow p-3 mb-5 bg-white rounded" alt="QuestioningBear">
-          </div>
-        </div>
+
+        <div class="card_images col">         
+          <img id="accessories" src="./assets/defaultClothingImage.webp" class="card-img-top" alt="QuestioningBear">
       </div>
+      </div>
+    </div>
+ 
 
     <!--JS SCRIPT-->
     <script type="text/javascript" src="./ideas.js"></script> 
@@ -69,5 +70,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </div> 
 </body>
 </html>

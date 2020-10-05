@@ -85,7 +85,7 @@ function fetchResults(e) {
 		let displayWinddirection = document.getElementById('currentWindDir').innerHTML=`Wind Direction: ${wDirection}`;
 		let displayicon = document.getElementById('apiIcon');
 	
-		//display icon based upon results
+		//display weather icon based upon results
 		if(icon == '01d'){
 				displayicon.src = "./assets/apiImages/01d.png"
 				displayicon.alt = "Sunny day"
@@ -129,28 +129,52 @@ function fetchResults(e) {
 			}	else {console.log=("no results")
 			}; //ends ifelse statment
 	
-		
+		//display what bottom to wear
 		let whatBottom = document.getElementById("bottoms");
 			if (FahrTemp > '70'){
-				whatBottom.src = "./assets/jeans.png"
-				whatBottom.alt = "BlueShorts"
-			} 	else if (FahrTemp <'70' && FahrTemp > '30') {
+				whatBottom.src = "./assets/shorts.png"
+				whatBottom.alt = "PinkShorts"
+			} 	else if (FahrTemp <'70') {
 					whatBottom.src = "./assets/jeans.png"
 					whatBottom.alt = "Jeans"	
 			}
-							
+		
+		//display what top to wear	
 		let whatShirt = document.getElementById("tops");
 			if (FahrTemp > '70'){
-				whatShirt.src = "./assets/topsShortSleeve.jpg"
-				whatShirt.alt = "ShortSleeveShirt"
-			}	else if (FahrTemp < '60'){
-					whatShirt.src = "./assets/TN_winter_turtle_neck_sweater_01.jpg"
+				whatShirt.src = "./assets/tshirt.png"
+				whatShirt.alt = "T-shirt"
+			}	else if (FahrTemp => "70" && FahrTemp >'50'){
+				whatShirt.src = "./assets/long-sleeve-tops.png"
+				whatShirt.alt = "LongSleeveTop"		
+			}	else if (FahrTemp < '49'){
+					whatShirt.src = "./assets/greenSweater.png"
 					whatShirt.alt = "Sweater"
 			}
 
+		//display what outer wear to wear	
 		let whatOuter = document.getElementById("outerwear");
-			if (FahrTemp < '60'){
-				whatOuter.src = "./assets/outerWearPinkCoat.png"
+			if (FahrTemp < '65'){
+				whatOuter.src = "./assets/jacket.png"
 				whatOuter.alt = "LightJacket"
+			} else if (FahrTemp > "65"  && FahrTemp < '72') {
+				whatOuter.src = "./assets/sweatshirt.jpg"
+				whatOuter.alt = "sweatshirt"
+			} else if (FahrTemp >= "72") {
+				whatOuter.src = "./assets/sunscreen.png"
+				whatOuter.alt = "sunscren"
 			}
+
+			//display what accessories to wear
+			let accessories = document.getElementById("accessories");
+			if (icon == "01d" || icon == "02d"){
+				accessories.src = "./assets/sunglasses.png"
+				accessories.alt = "Sunglasses"
+			} else if (icon == "09d" || icon == "10d"){
+				accessories.src = "./assets/outerWearUmbrella.png"
+				accessories.alt = "Umbrella"
+			} else if (icon != "" && FahrTemp < "30"){
+			accessories.src = "./assets/hatglovescarf.jpg"
+			accessories.alt = "hatGloveScarf"
+		}
 	}; //ends getWeather
