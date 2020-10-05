@@ -16,14 +16,15 @@ let wSpeed;
 let wDirection;
 
 //targets the DOM element
-let btnSubmit = document.getElementById("submit");
+let body = document.querySelector("body");
+
 
 // add EventListener
-btnSubmit.addEventListener("click", fetchResults);
+body.addEventListener("load", fetchResults);
+
 
 //get api information
 function fetchResults(e) {
-	e.preventDefault();
 
 	fetch(url)
 		.then(function (result) {
@@ -107,11 +108,11 @@ function fetchResults(e) {
 				displayicon.alt = "Partly cloudy day"
 
 			} 	else if(icon == '03n'){
-				displayicon.src = "./assets/cloudyNight.jpg"
+				displayicon.src = "./assets/apiImages/03d.png" //03n is missing on api site
 				displayicon.alt = "Cloudy night"
 				
 			} 	else if(icon == '04d'){
-				displayicon.src = "./assets/cloudy.jpg"
+				displayicon.src = "./assets/apiImages/04d.png"
 				displayicon.alt = "Cloudy day"
 			
 			}   else if(icon == '09d'){
@@ -178,3 +179,5 @@ function fetchResults(e) {
 			accessories.alt = "hatGloveScarf"
 		}
 	}; //ends getWeather
+
+

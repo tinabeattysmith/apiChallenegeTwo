@@ -1,22 +1,19 @@
 .container {
     max-width: 100%;
-    background-image: url(./assets/background.jpg);
-}
-
-.container_btn {
-    text-align: center;
-    padding: 1em;
+    background-image: url(./assets/backgroundfall3.jpg);
+    background-size: 100vmax;
+    background-position: center;
 }
 
 .grid-container_deck{
     display: inline-grid;
     align-items: center;
-
 }  
 
 .card-body_details {
-    background-image: linear-gradient( 109.6deg,  rgba(48,207,208,1) 11.2%, rgba(51,8,103,1) 92.5% );
-    justify-self: stretch;
+/*background-image: linear-gradient( 109.6deg,  rgba(48,207,208,1) 11.2%, rgba(51,8,103,1) 92.5% );*/
+justify-self: stretch;
+padding-left: 7em;
 }
 
 #details h5 {
@@ -27,6 +24,7 @@
 
 #currentWeather {
    text-align: center;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
    height: auto;
    width: auto; 
 }
@@ -35,4 +33,13 @@
     display: inline-grid ;
     flex-direction: row;
     justify-items: center;   
+}
+
+.sectiontitle h2 {
+    text-align: center;
+    color:wheat
+}
+
+.card-group {
+    padding-top: 2em;
 }

@@ -8,45 +8,47 @@
     <!--CSS-->
     <link rel="stylesheet" href="index.css">
     <!--BOOTSTRAP RESPONSIVE META TAG-->
-    <title>Document</title>
+    <title>What should I wear today?</title>
 </head>
-<body> 
+<body onload = "fetchResults()"> 
  
 <div class="container">  
 
-    <!--Submit button-->
+    <!--Submit button
     <div class="container_btn">        
         <button class="btn btn-primary" id="submit" type="submit">Click to see how to dress today</button>
-    </div> 
+    </div> -->
 
     <!--Current Weather-->
     <div class = "grid-container_deck ">
-        <div class="card-deck row align-items-center ">
-            <div class="card col">
-                <!--Weather Details-->
-                <div class="card-body_details" id="details">
-                    <h5 class="card-title">Today's Weather</h5>
-                    <p class="card-text" id="currentWeather"></p>
-                    <p class=currentWeather id=currentTime>Time Stamp: </p>
-                    <p class=currentWeather id=currentTemp>Temperature: </p>
-                    <p class=currentWeather id=currentWindSpeed>Wind Speed: </p>
-                    <p class=currentWeather id=currentWindDir>Wind Direction: </p>
-                    <p class=currentWeather id=currentHumidity>Humidity: </p>
-                </div>
+        <div class="card-deck row align-items-center">
+            <!--Weather Details-->
+            <div class="card-body_details col" id="details">
+                <h5 class="card-title">Today's Weather</h5>
+                <p class="card-text" id="currentWeather"></p>
+                <p class=currentWeather id=currentTime>Time Stamp: </p>
+                <p class=currentWeather id=currentTemp>Temperature: </p>
+                <p class=currentWeather id=currentWindSpeed>Wind Speed: </p>
+                <p class=currentWeather id=currentWindDir>Wind Direction: </p>
+                <p class=currentWeather id=currentHumidity>Humidity: </p>
             </div>
+        
             <!--Weather Image-->   
-            <div class="card col">
-                <div class="card-body_details" id="weatherImage">
-                    <img id="apiIcon"src="..." class="card-img" alt="...">
-                </div>
-            </div>
+            <div class="card-body_details col" id="weatherImage">
+              <img id="apiIcon"src="..." class="card-img" alt="...">
+            </div>            
         </div>
-   
-      <!--Display clothing type-->
-      <div class="card-group row align-items-center">
-        <div class="card_images col">   
-          <img id="bottoms" src="./assets/defaultClothingImage.webp" class="card-img-top" alt="QuestioningBear">
+
+        <div class="sectiontitle">
+          <h2>What should I wear today?</h2>
+
         </div>
+  
+        <!--Display clothing type-->
+        <div class="card-group row align-items-center">
+          <div class="card_images col">   
+            <img id="bottoms" src="./assets/defaultClothingImage.webp" class="card-img-top" alt="QuestioningBear">
+          </div>
 
         <div class="card_images col">        
             <img id="tops" src="./assets/defaultClothingImage.webp" class="card-img-top" alt="QuestioningBear">
@@ -69,7 +71,7 @@
     <!--BOOTSTRAP SCRIPTS-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  </div> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
+  </div>
 </body>
 </html>
