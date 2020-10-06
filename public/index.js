@@ -88,43 +88,43 @@ function fetchResults(e) {
 	
 		//display weather icon based upon results
 		if(icon == '01d'){
-				displayicon.src = "./assets/apiImages/01d.png"
+				displayicon.src = "./assets/01d.png"
 				displayicon.alt = "Sunny day"
 
 			} else if(icon == '01n'){
-				displayicon.src = "./assets/apiImages/01n.png"
+				displayicon.src = "./assets/01n.png"
 				displayicon.alt = "Clear night"
 
 			} 	else if(icon =='02d'){
-				displayicon.src = "./assets/apiImages/02d.png"
+				displayicon.src = "./assets/02d.png"
 				displayicon.alt = "Partly sunny day"
 
 			} 	else if(icon == '02n'){
-				displayicon.src = "./assets/apiImages/02n.png"
+				displayicon.src = "./assets/02n.png"
 				displayicon.alt = "Partly cloudy night"
 
 			} 	else if(icon == '03d'){
-				displayicon.src = "./assets/apiImages/03d.png"
+				displayicon.src = "./assets/03d.png"
 				displayicon.alt = "Partly cloudy day"
 
 			} 	else if(icon == '03n'){
-				displayicon.src = "./assets/apiImages/03d.png" //03n is missing on api site
+				displayicon.src = "./assets/03d.png" //03n is missing on api site
 				displayicon.alt = "Cloudy night"
 				
 			} 	else if(icon == '04d'){
-				displayicon.src = "./assets/apiImages/04d.png"
+				displayicon.src = "./assets/04d.png"
 				displayicon.alt = "Cloudy day"
 			
 			}   else if(icon == '09d'){
-				displayicon.src = "./assets/apiImages/09d.png"
+				displayicon.src = "./assets/09d.png"
 				displayicon.alt = "Rainy day"
 
 			}	else if(icon == '10d'){
-				displayicon.src = "./assets/apiImages/10d.png"
+				displayicon.src = "./assets/10d.png"
 				displayicon.alt = "Chance of rain today"
 
 			}	else if(icon == '10n'){
-				displayicon.src = "./assets/apiImages/10n.png"
+				displayicon.src = "./assets/10n.png"
 				displayicon.alt = "Chance of rain tonight"
 
 			}	else {console.log=("no results")
