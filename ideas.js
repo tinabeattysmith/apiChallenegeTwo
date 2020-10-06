@@ -132,52 +132,67 @@ function fetchResults(e) {
 	
 		//display what bottom to wear
 		let whatBottom = document.getElementById("bottoms");
-			if (FahrTemp > '70'){
-				whatBottom.src = "./assets/shorts.png"
-				whatBottom.alt = "PinkShorts"
-			} 	else if (FahrTemp <'70') {
-					whatBottom.src = "./assets/jeans.png"
-					whatBottom.alt = "Jeans"	
-			}
+		if	(icon =="01n" || icon == "02n" || icon == "03n"|| icon == "10n" ){
+			whatBottom.src = "./assets/moon.png"
+			whatBottom.alt = "moon"} 
+			else if (FahrTemp <'70') {
+			whatBottom.src = "./assets/jeans.png"
+			whatBottom.alt = "Jeans"	
+		} 	else if(FahrTemp > '70'){
+			whatBottom.src = "./assets/shorts.png"
+			whatBottom.alt = "PinkShorts"
+		}
 		
-		//display what top to wear	
+		//display what top to wear
 		let whatShirt = document.getElementById("tops");
-			if (FahrTemp > '70'){
-				whatShirt.src = "./assets/tshirt.png"
-				whatShirt.alt = "T-shirt"
-			}	else if (FahrTemp => "70" && FahrTemp >'50'){
-				whatShirt.src = "./assets/long-sleeve-tops.png"
-				whatShirt.alt = "LongSleeveTop"		
-			}	else if (FahrTemp < '49'){
-					whatShirt.src = "./assets/greenSweater.png"
-					whatShirt.alt = "Sweater"
-			}
+		if (icon =="01n" || icon == "02n" || icon == "03n"|| icon == "10n" ){
+			whatShirt.src = "./assets/moon.png"
+			whatShirt.alt = "moon"}
+			else if (FahrTemp > '70'){
+			whatShirt.src = "./assets/tshirt.png"
+			whatShirt.alt = "T-shirt"
+		}	else if (FahrTemp => "70" && FahrTemp >'50'){
+			whatShirt.src = "./assets/long-sleeve-tops.png"
+			whatShirt.alt = "LongSleeveTop"		
+		}	else if (FahrTemp < '49'){
+			whatShirt.src = "./assets/greenSweater.png"
+			whatShirt.alt = "Sweater"
+		}
+				
 
 		//display what outer wear to wear	
 		let whatOuter = document.getElementById("outerwear");
-			if (FahrTemp < '65'){
-				whatOuter.src = "./assets/jacket.png"
-				whatOuter.alt = "LightJacket"
-			} else if (FahrTemp > "65"  && FahrTemp < '72') {
-				whatOuter.src = "./assets/sweatshirt.jpg"
-				whatOuter.alt = "sweatshirt"
-			} else if (FahrTemp >= "72") {
-				whatOuter.src = "./assets/sunscreen.png"
-				whatOuter.alt = "sunscren"
-			}
-
-			//display what accessories to wear
-			let accessories = document.getElementById("accessories");
-			if (icon == "01d" || icon == "02d"){
-				accessories.src = "./assets/sunglasses.png"
-				accessories.alt = "Sunglasses"
-			} else if (icon == "09d" || icon == "10d"){
-				accessories.src = "./assets/outerWearUmbrella.png"
-				accessories.alt = "Umbrella"
-			} else if (icon != "" && FahrTemp < "30"){
-			accessories.src = "./assets/hatglovescarf.jpg"
-			accessories.alt = "hatGloveScarf"
+		if(icon =="01n" || icon == "02n" || icon == "03n"|| icon == "10n" ){
+		whatOuter.src = "./assets/moon.png"
+		whatOuter.alt = "moon"
+	}
+		else if (FahrTemp < '65'){
+			whatOuter.src = "./assets/jacket.png"
+			whatOuter.alt = "LightJacket"
+		} else if (FahrTemp > "65"  && FahrTemp < '72') {
+			whatOuter.src = "./assets/sweatshirt.jpg"
+			whatOuter.alt = "sweatshirt"
+		} else if (FahrTemp >= "72") {
+			whatOuter.src = "./assets/sunscreen.png"
+			whatOuter.alt = "sunscreen"
 		}
+
+		//display what accessories to wear
+		let accessories = document.getElementById("accessories");
+		if (icon == "01d" || icon == "02d"){
+			accessories.src = "./assets/sunglasses.png"
+			accessories.alt = "Sunglasses"
+		} else if (icon == "09d" || icon == "10d"){
+			accessories.src = "./assets/outerWearUmbrella.png"
+			accessories.alt = "Umbrella"
+		} else if(icon =="01n" || icon == "02n" || icon == "03n"|| icon == "10n"){
+			accessories.src = "./assets/moon.png"
+			accessories.alt = "moon"
+		} else if (icon != "" && FahrTemp < "30"){
+			accessories.src = "./assets/hatglovescarf.jpg"
+			accessories.alt = "hatGloveScarf"}
+			
+
 	}; //ends getWeather
 
 
