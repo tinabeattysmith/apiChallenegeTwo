@@ -5,16 +5,64 @@
     background-position: center;
 }
 
-.grid-container_deck{
+.formInput{
+    color: #34495e
+    
+}
+
+#states {
+    border: none;
+    background-color: #d6bda0;
+
+}
+#cities {
+    border: none;
+    background-color: #ecdac5;
+}
+
+.containerbutton {
+    text-align: center;
+}
+
+#submit {
+    background: #34495e;
+    color: bisque;
+    border: 0.25rem solid #34495e;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  #submit:hover {
+    color: #34495e;}
+
+#submit::after {
+  content: "";
+  background: lightslategrey;
+  position: absolute;
+  z-index: -1;
+  padding: 0.85em 0.75em;
+  display: block;
+}
+#submit:after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: scale(0, 0) rotate(-180deg);
+}
+#submit:hover::after {
+  transform: scale(1, 1) rotate(0deg);
+}
+
+.grid-container_deck {
     display: inline-grid;
     align-items: center;
 }  
 
 .card-body_details {
-/*background-image: linear-gradient( 109.6deg,  rgba(48,207,208,1) 11.2%, rgba(51,8,103,1) 92.5% );*/
 justify-self: center;
 padding-top: 2em;;
-padding-left: 10em;
+padding-left: 3em;
 font-size: large;
 font-weight: 500;
 }
@@ -33,7 +81,7 @@ font-weight: 500;
 }
 
 #weatherImage {
-    padding-right: 10em;
+    padding-right: 5em;
 }
 .grid-container{
     display: inline-grid ;
@@ -44,8 +92,10 @@ font-weight: 500;
 .sectiontitle h2 {
     text-align: center;
     color:wheat;
+    text-shadow: 4px 4px brown;
 }
 
 .card-group {
     padding-top: 2em;
 }
+
