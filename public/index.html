@@ -19,7 +19,7 @@
         <div class="col-4">
           <label class="formInput" for="states">Select a state:</label>
           <select name="states" id="states" onchange="changeState()">
-          <option value="selectvalue">Please select a State</option>
+        <option value="selectvalue">Please select a State</option>
         <option value="alabama">Alabama</option>
         <option value="alaska">Alaska</option>
         <option value="arizona">Arizona</option>
@@ -80,16 +80,18 @@
           <option value=""></option>
         </div>
       </div>
-    </form>
+    </form> 
+    <!--end form-->
 
         <!--Submit button-->        
     <div class="containerbutton">
       <div>
         <button class="btn" id="submit" type="submit">Click to see how to dress today</button>
       </div>
-    </div>
+    </div> 
+    <!--end button-->
 
-  <!--Current Weather-->
+    <!--Current Weather-->
     <div class = "grid-container_deck ">
         <div class="card-deck row align-items-center">
             <!--Weather Details-->
@@ -101,40 +103,54 @@
                 <p class=currentWeather id=currentWindSpeed>Wind Speed: </p>
                 <p class=currentWeather id=currentWindDir>Wind Direction: </p>
                 <p class=currentWeather id=currentHumidity>Humidity: </p>
-            </div>
+            </div>        
+              <!--end current weather-->
         
             <!--Weather Image-->   
             <div class="card-body_details col" id="weatherImage">
               <img id="apiIcon"src="" class="card-img" alt="">
-            </div>            
-        </div>
-
-        <div class="sectiontitle">
-          <h2>What should I wear today?</h2>
-
-        </div>
-  
-        <!--Display clothing type-->
-        <div class="card-group row align-items-center">
-          <div class="card_images col">   
-            <img id="bottoms" src="" class="card-img-top" alt="">
+            </div> 
+            <!--end weather image-->
           </div>
-
-        <div class="card_images col">        
-            <img id="tops" src="" class="card-img-top" alt="">
         </div>
-    
-        <div class="card_images col">         
-            <img id="outerwear" src="" class="card-img-top" alt="">
-        </div>
-
-        <div class="card_images col">         
-          <img id="accessories" src="" class="card-img-top" alt="">
-      </div>
+        <!--end grid containter-->
+   
+   
+        <!--title-->
+    <div class="containerTitle"> 
+      <div class="sectiontitle">
+        <h2>What should I wear today?</h2>
       </div>
     </div>
- 
+        <!--end of title-->
 
+  
+    <!--Display clothing type-->
+    <div class="card-group row align-items-center">
+      <div class="card_images col">   
+        <img id="bottoms" src="" class="card-img-top" alt="">
+      </div>
+      <!--end of bottoms-->
+
+      <div class="card_images col">        
+          <img id="tops" src="" class="card-img-top" alt="">
+      </div>
+      <!--end of tops-->
+  
+      <div class="card_images col">         
+          <img id="outerwear" src="" class="card-img-top" alt="">
+      </div>
+      <!--end of outerWear-->
+
+      <div class="card_images col">         
+        <img id="accessories" src="" class="card-img-top" alt="">
+      </div>
+      <!--end of acessories-->
+    </div>
+    <!--end card group-->
+
+
+</div>
     <!--JS SCRIPT-->
     <script type="text/javascript" src="./index.js"></script> 
 
@@ -142,6 +158,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
-  </div>
+
 </body>
 </html>
